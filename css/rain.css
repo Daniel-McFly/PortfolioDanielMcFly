@@ -1,0 +1,45 @@
+.rain1{
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rain{
+    width: 25%;
+    height:60vh;
+    background-image: url(../img/neonguy.jpg);
+    animation: color-change 5s alternate infinite;
+}
+
+.rain::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/rain.png);
+    animation: rain 0.5s linear infinite;
+}
+.text2{
+    width: 25%;
+    padding: 20px;
+}
+@keyframes color-change{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(-90deg);
+    }
+}
+
+@keyframes rain{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position:  -10% 1000%;
+    }
+}
